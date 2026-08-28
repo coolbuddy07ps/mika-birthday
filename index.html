@@ -1,467 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For Mika ❤️ — From Prasant</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  background: #09070b;
-  color: #fff;
-  overflow-x: hidden;
-  font-family: Poppins, sans-serif;
+body{
+  background:#09070b;
+  color:#fff;
+  overflow-x:hidden;
+  font-family:Poppins,sans-serif;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+
   background:
-    radial-gradient(circle at 20% 20%, rgba(255,91,145,.16), transparent 28%),
-    radial-gradient(circle at 80% 70%, rgba(172,91,255,.14), transparent 30%),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,91,145,.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(172,91,255,.14),
+      transparent 30%
+    ),
     #09070b;
 }
 
-canvas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 10;
+section{
+  position:relative;
+  min-height:100vh;
+  padding:80px 20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-section {
-  position: relative;
-  min-height: 100vh;
-  padding: 80px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container{
+  width:min(1050px,100%);
+  margin:auto;
 }
 
-.container {
-  width: min(1050px, 100%);
-  margin: auto;
+.hero{
+  text-align:center;
+  min-height:100svh;
+  flex-direction:column;
 }
 
-.hero {
-  text-align: center;
-  min-height: 100svh;
-  flex-direction: column;
-}
-
-.kicker {
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-size: 11px;
-  color: #f6a5bf;
-  margin-bottom: 18px;
+.kicker{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:11px;
+  color:#f6a5bf;
+  margin-bottom:18px;
 }
 
 h1,
 h2,
-.script {
-  font-family: "Cormorant Garamond", serif;
+.script{
+  font-family:"Cormorant Garamond",serif;
 }
 
-h1 {
-  font-size: clamp(64px, 16vw, 150px);
-  line-height: .8;
-  font-weight: 600;
+h1{
+  font-size:clamp(64px,16vw,150px);
+  line-height:.8;
+  font-weight:600;
 }
 
-.hero h1 span {
-  display: block;
-  color: #ff8eaf;
+.hero h1 span{
+  display:block;
+  color:#ff8eaf;
 }
 
-.subtitle {
-  max-width: 650px;
-  margin: 30px auto;
-  color: #d8cfd5;
-  line-height: 1.8;
-  font-size: 15px;
+.subtitle{
+  max-width:650px;
+  margin:30px auto;
+  color:#d8cfd5;
+  line-height:1.8;
+  font-size:15px;
 }
 
-.btn {
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.07);
-  color: #fff;
-  border-radius: 999px;
-  padding: 14px 25px;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  font-family: Poppins;
-  transition: .3s;
+.btn{
+  border:1px solid rgba(255,255,255,.22);
+
+  background:rgba(255,255,255,.07);
+
+  color:#fff;
+
+  border-radius:999px;
+
+  padding:14px 25px;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(10px);
+
+  font-family:Poppins;
+
+  transition:.3s;
 }
 
-.btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: rgba(255,255,255,.14);
+.btn:hover{
+  transform:translateY(-3px) scale(1.03);
+  background:rgba(255,255,255,.14);
 }
 
-.music-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 50;
-  border: 1px solid rgba(255,255,255,.2);
-  background: rgba(20,15,22,.75);
-  color: #fff;
-  border-radius: 50px;
-  padding: 10px 16px;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
+.music-btn{
+
+  position:fixed;
+
+  top:20px;
+  right:20px;
+
+  z-index:50;
+
+  border:1px solid rgba(255,255,255,.2);
+
+  background:rgba(20,15,22,.75);
+
+  color:#fff;
+
+  border-radius:50px;
+
+  padding:10px 16px;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(10px);
 }
 
-.scroll {
-  position: absolute;
-  bottom: 25px;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #9c939b;
+.scroll{
+
+  position:absolute;
+
+  bottom:25px;
+
+  font-size:10px;
+
+  letter-spacing:3px;
+
+  color:#9c939b;
 }
 
-h2 {
-  font-size: clamp(42px, 8vw, 78px);
-  text-align: center;
-  font-weight: 500;
+h2{
+
+  font-size:clamp(42px,8vw,78px);
+
+  text-align:center;
+
+  font-weight:500;
 }
 
-.lead {
-  text-align: center;
-  color: #bdb3ba;
-  margin: 15px auto 45px;
-  max-width: 600px;
-  line-height: 1.7;
+.lead{
+
+  text-align:center;
+
+  color:#bdb3ba;
+
+  margin:15px auto 45px;
+
+  max-width:650px;
+
+  line-height:1.7;
 }
 
-/* PHOTO GALLERY */
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+/* =========================
+   CINEMATIC SLIDESHOW
+========================= */
+
+.slideshow{
+
+  position:relative;
+
+  width:min(780px,100%);
+
+  height:min(72vh,650px);
+
+  min-height:450px;
+
+  margin:40px auto;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  background:#151217;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.55),
+    0 0 50px rgba(255,100,150,.08);
 }
 
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  background: #151217;
-  min-height: 330px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+.slide{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  opacity:0;
+
+  transform:scale(1.08);
+
+  transition:
+    opacity 1.4s ease,
+    transform 6s ease;
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  min-height: 330px;
-  object-fit: cover;
-  display: block;
-  transition: transform .8s ease;
+.slide.active{
+
+  opacity:1;
+
+  transform:scale(1);
 }
 
-.card:hover img {
-  transform: scale(1.045);
+
+/* SLIDESHOW DARK GRADIENT */
+
+.slideshow::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.05),
+      transparent 50%,
+      rgba(0,0,0,.35)
+    );
 }
 
-.card:nth-child(2) {
-  transform: translateY(45px);
+
+/* SLIDESHOW TEXT */
+
+.slide-text{
+
+  position:absolute;
+
+  bottom:25px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  z-index:5;
+
+  text-align:center;
+
+  width:90%;
+
+  font-family:"Cormorant Garamond";
+
+  font-size:28px;
+
+  color:white;
+
+  text-shadow:
+    0 2px 15px rgba(0,0,0,.8);
 }
 
-.card:nth-child(3) {
-  transform: translateY(-20px);
+
+/* SLIDE DOTS */
+
+.dots{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:8px;
+
+  margin-top:20px;
 }
 
-.caption {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  padding: 13px 15px;
-  border-radius: 16px;
-  background: rgba(0,0,0,.45);
-  backdrop-filter: blur(12px);
-  font-family: "Cormorant Garamond";
-  font-size: 22px;
+.dot{
+
+  width:8px;
+
+  height:8px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.3);
+
+  transition:.4s;
+
 }
 
-/* SLIDESHOW */
+.dot.active{
 
-.slideshow {
-  position: relative;
-  width: min(700px, 100%);
-  height: min(75vh, 600px);
-  margin: 40px auto 0;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 25px 80px rgba(0,0,0,.5);
-  border: 1px solid rgba(255,255,255,.1);
+  width:25px;
+
+  border-radius:20px;
+
+  background:#ff9db9;
 }
 
-.slideshow img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.2s ease;
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+
+  max-width:760px;
+
+  margin:auto;
+
+  padding:42px 34px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:28px;
+
+  background:rgba(255,255,255,.045);
+
+  backdrop-filter:blur(15px);
+
+  line-height:2;
+
+  font-size:16px;
+
+  color:#ded6dc;
 }
 
-.slideshow img.active {
-  opacity: 1;
+.letter .hello{
+
+  font-family:"Cormorant Garamond";
+
+  font-size:38px;
+
+  color:#ff9db9;
+
+  margin-bottom:12px;
 }
 
-/* LETTER */
+.signature{
 
-.letter {
-  max-width: 760px;
-  margin: auto;
-  padding: 42px 34px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 28px;
-  background: rgba(255,255,255,.045);
-  backdrop-filter: blur(15px);
-  line-height: 2;
-  font-size: 16px;
-  color: #ded6dc;
+  margin-top:28px;
+
+  text-align:right;
+
+  font-family:"Cormorant Garamond";
+
+  font-size:28px;
+
+  color:#fff;
 }
 
-.letter .hello {
-  font-family: "Cormorant Garamond";
-  font-size: 38px;
-  color: #ff9db9;
-  margin-bottom: 12px;
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+
+  margin-top:40px;
 }
 
-.signature {
-  margin-top: 28px;
-  text-align: right;
-  font-family: "Cormorant Garamond";
-  font-size: 28px;
-  color: #fff;
+.reason{
+
+  padding:27px 20px;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,.05);
+
+  border:1px solid rgba(255,255,255,.09);
+
+  text-align:center;
+
+  transition:.4s;
 }
 
-/* REASONS */
+.reason:hover{
 
-.reasons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 40px;
+  transform:translateY(-8px);
+
+  background:rgba(255,255,255,.08);
 }
 
-.reason {
-  padding: 27px 20px;
-  border-radius: 22px;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.09);
-  text-align: center;
+.reason b{
+
+  display:block;
+
+  font-family:"Cormorant Garamond";
+
+  font-size:26px;
+
+  margin-bottom:8px;
+
+  color:#ffabc1;
 }
 
-.reason b {
-  display: block;
-  font-family: "Cormorant Garamond";
-  font-size: 26px;
-  margin-bottom: 8px;
-  color: #ffabc1;
+.reason p{
+
+  font-size:13px;
+
+  color:#bdb3ba;
+
+  line-height:1.6;
 }
 
-.reason p {
-  font-size: 13px;
-  color: #bdb3ba;
-  line-height: 1.6;
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final{
+
+  text-align:center;
+
+  min-height:100svh;
 }
 
-/* FINAL */
+.final h2{
 
-.final {
-  text-align: center;
-  min-height: 100svh;
+  max-width:800px;
+
+  margin:20px auto;
 }
 
-.final h2 {
-  max-width: 800px;
-  margin: 20px auto;
+.bigheart{
+
+  font-size:75px;
+
+  animation:pulse 1.5s infinite;
 }
 
-.bigheart {
-  font-size: 75px;
-  animation: pulse 1.5s infinite;
-}
+@keyframes pulse{
 
-@keyframes pulse {
-  50% {
-    transform: scale(1.12);
+  50%{
+    transform:scale(1.12);
   }
+
 }
 
-/* FINAL SURPRISE */
 
-#surprise {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: rgba(5,3,8,.96);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 25px;
+/* =========================
+   FINAL SURPRISE
+========================= */
+
+#surprise{
+
+  display:none;
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:100;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,70,130,.15),
+      rgba(5,3,8,.98) 60%
+    );
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:25px;
 }
 
-#surprise.show {
-  display: flex;
-  animation: fadeIn 1s ease;
+#surprise.show{
+
+  display:flex;
+
+  animation:fadeIn 1.2s ease;
 }
 
-.surprise-content {
-  max-width: 800px;
-  animation: zoomIn 1.2s ease;
+.surprise-content{
+
+  max-width:850px;
+
+  animation:zoomIn 1.2s ease;
 }
 
-.surprise-heart {
-  font-size: 90px;
-  animation: pulse 1.2s infinite;
+.surprise-heart{
+
+  font-size:90px;
+
+  animation:pulse 1.2s infinite;
 }
 
-.surprise-content h2 {
-  font-size: clamp(45px, 9vw, 90px);
-  color: #ff9db9;
-  margin: 20px 0;
+.surprise-content h2{
+
+  font-size:clamp(50px,10vw,100px);
+
+  color:#ff9db9;
+
+  margin:20px 0;
 }
 
-.surprise-content p {
-  color: #d8cfd5;
-  font-size: 18px;
-  line-height: 1.8;
+.surprise-content p{
+
+  color:#d8cfd5;
+
+  font-size:18px;
+
+  line-height:1.8;
 }
 
-.close-btn {
-  margin-top: 30px;
+.close-btn{
+
+  margin-top:30px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@keyframes fadeIn{
 
-@keyframes zoomIn {
-  from {
-    transform: scale(.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* FALLING HEART */
-
-.falling-heart {
-  position: fixed;
-  top: -30px;
-  z-index: 20;
-  pointer-events: none;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* REVEAL */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: 1s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: none;
-}
-
-.footer {
-  padding: 30px;
-  text-align: center;
-  color: #6f6870;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
-/* MOBILE */
-
-@media(max-width:700px) {
-
-  .gallery {
-    grid-template-columns: 1fr;
+  from{
+    opacity:0;
   }
 
-  .card:nth-child(2),
-  .card:nth-child(3) {
-    transform: none;
+  to{
+    opacity:1;
   }
 
-  .card,
-  .card img {
-    min-height: 430px;
-  }
-
-  .reasons {
-    grid-template-columns: 1fr;
-  }
-
-  .letter {
-    padding: 30px 22px;
-  }
-
-  .slideshow {
-    height: 70vh;
-  }
 }
+
+@keyframes zoomIn{
+
+  from{
+    transform:scale(.7);
+    opacity:0;
+  }
+
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+
+/* =========================
+   FALLING HEARTS
+========================= */
+
+.falling-heart{
+
+  position:fixed;
+
+  top:-30px;
+
+  z-index:20;
+
+  pointer-events:none;
+
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+  to{
+
+    transform:
+      translateY(110vh)
+      rotate(360deg);
+
+    opacity:0;
+  }
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+#confetti{
+
+  position:fixed;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  pointer-events:none;
+
+  z-index:90;
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(25px);
+
+  transition:1s ease;
+}
+
+.reveal.show{
+
+  opacity:1;
+
+  transform:none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+  padding:30px;
+
+  text-align:center;
+
+  color:#6f6870;
+
+  font-size:11px;
+
+  letter-spacing:1px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  section{
+
+    padding:70px 18px;
+  }
+
+  h1{
+
+    font-size:clamp(58px,18vw,100px);
+  }
+
+  .slideshow{
+
+    height:65vh;
+
+    min-height:430px;
+
+    border-radius:22px;
+  }
+
+  .reasons{
+
+    grid-template-columns:1fr;
+  }
+
+  .letter{
+
+    padding:30px 22px;
+  }
+
+  .music-btn{
+
+    top:12px;
+
+    right:12px;
+
+    font-size:12px;
+  }
+
+  .slide-text{
+
+    font-size:23px;
+  }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- BACKGROUND MUSIC -->
+
+<!-- =========================
+     MUSIC
+========================= -->
+
 <audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
+
+  <source src="./music.mp3" type="audio/mpeg">
+
 </audio>
 
-<button class="music-btn" onclick="toggleMusic()" id="musicButton">
+
+<button
+  class="music-btn"
+  id="musicButton"
+  onclick="toggleMusic()"
+>
   🎵 Music
 </button>
 
+
+<!-- CONFETTI -->
+
 <canvas id="confetti"></canvas>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -472,29 +766,48 @@ h2 {
     </div>
 
     <h1>
+
       Happy Birthday
-      <span>Mika ❤️</span>
+
+      <span>
+        Mika ❤️
+      </span>
+
     </h1>
 
     <p class="subtitle">
+
       29 August 2001 — the day the world got you.
-      And somehow, I got lucky enough to have you in my story. ❤️
+
+      And somehow, I got lucky enough to have you
+      in my story. ❤️
+
     </p>
 
-    <button class="btn" onclick="startExperience()">
+    <button
+      class="btn"
+      onclick="startExperience()"
+    >
+
       Open your surprise ✨
+
     </button>
 
   </div>
 
+
   <div class="scroll">
+
     SCROLL FOR YOUR SURPRISE ↓
+
   </div>
 
 </section>
 
 
-<!-- PHOTO SECTION -->
+<!-- =========================
+     SLIDESHOW SECTION
+========================= -->
 
 <section id="story">
 
@@ -503,71 +816,86 @@ h2 {
     <div class="reveal">
 
       <div class="kicker">
+
         our little collection of chaos
+
       </div>
 
       <h2>
+
         Some moments I'd keep forever.
+
       </h2>
 
       <p class="lead">
-        Five photos. A thousand memories.
+
+        Five photos.
+
+        A thousand memories.
+
         And one very cute troublemaker named Mika. 😌❤️
+
       </p>
 
     </div>
 
 
-    <div class="gallery">
-
-      <div class="card">
-        <img src="./photo1.jpeg" alt="Mika ❤️">
-      </div>
-
-      <div class="card">
-        <img src="./photo2.jpeg" alt="Mika ❤️">
-      </div>
-
-      <div class="card">
-        <img src="./photo3.jpeg" alt="Mika ❤️">
-      </div>
-
-      <div class="card">
-        <img src="./photo4.jpeg" alt="Mika ❤️">
-      </div>
-
-      <div class="card">
-        <img src="./photo5.jpeg" alt="Mika ❤️">
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SLIDESHOW -->
-
-<section>
-
-  <div class="container reveal">
-
-    <div class="kicker">
-      just one more look ❤️
-    </div>
-
-    <h2>
-      Because I could never get tired of seeing you.
-    </h2>
+    <!-- MAIN SLIDESHOW -->
 
     <div class="slideshow">
 
-      <img src="./photo1.jpeg" class="slide active" alt="Mika">
-      <img src="./photo2.jpeg" class="slide" alt="Mika">
-      <img src="./photo3.jpeg" class="slide" alt="Mika">
-      <img src="./photo4.jpeg" class="slide" alt="Mika">
-      <img src="./photo5.jpeg" class="slide" alt="Mika">
+      <img
+        src="./photo1.jpeg"
+        class="slide active"
+        alt="Mika ❤️"
+      >
+
+      <img
+        src="./photo2.jpeg"
+        class="slide"
+        alt="Mika ❤️"
+      >
+
+      <img
+        src="./photo3.jpeg"
+        class="slide"
+        alt="Mika ❤️"
+      >
+
+      <img
+        src="./photo4.jpeg"
+        class="slide"
+        alt="Mika ❤️"
+      >
+
+      <img
+        src="./photo5.jpeg"
+        class="slide"
+        alt="Mika ❤️"
+      >
+
+      <div class="slide-text" id="slideText">
+
+        My favourite person ❤️
+
+      </div>
+
+    </div>
+
+
+    <!-- DOTS -->
+
+    <div class="dots">
+
+      <div class="dot active"></div>
+
+      <div class="dot"></div>
+
+      <div class="dot"></div>
+
+      <div class="dot"></div>
+
+      <div class="dot"></div>
 
     </div>
 
@@ -576,7 +904,9 @@ h2 {
 </section>
 
 
-<!-- REASONS -->
+<!-- =========================
+     REASONS
+========================= -->
 
 <section>
 
@@ -585,37 +915,71 @@ h2 {
     <div class="reveal">
 
       <div class="kicker">
+
         things I probably don't say enough
+
       </div>
 
       <h2>
+
         Why you are my favourite.
+
       </h2>
+
 
       <div class="reasons">
 
-        <div class="reason">
-          <b>Your smile ❤️</b>
-          <p>
-            Somehow it can fix a bad day without even trying.
-          </p>
-        </div>
 
         <div class="reason">
-          <b>Your madness 😂</b>
+
+          <b>
+            Your smile ❤️
+          </b>
+
           <p>
+
+            Somehow it can fix a bad day
+            without even trying.
+
+          </p>
+
+        </div>
+
+
+        <div class="reason">
+
+          <b>
+            Your madness 😂
+          </b>
+
+          <p>
+
             Life with you is never boring.
-            Slightly dangerous, but never boring.
+
+            Slightly dangerous,
+            but never boring.
+
           </p>
+
         </div>
 
+
         <div class="reason">
-          <b>Your heart ❤️</b>
+
+          <b>
+            Your heart ❤️
+          </b>
+
           <p>
-            The kindness, care and warmth you carry
-            make you impossible not to love.
+
+            The kindness, care and warmth
+            you carry make you impossible
+            not to love.
+
           </p>
+
         </div>
+
 
       </div>
 
@@ -626,7 +990,9 @@ h2 {
 </section>
 
 
-<!-- LOVE LETTER -->
+<!-- =========================
+     LOVE LETTER
+========================= -->
 
 <section>
 
@@ -635,8 +1001,11 @@ h2 {
     <div class="letter reveal">
 
       <div class="hello">
+
         Dear Mika,
+
       </div>
+
 
       <p>
 
@@ -646,9 +1015,12 @@ h2 {
         <br><br>
 
         I hope you know how special you are to me.
-        I love the little things about you — your smile,
-        your expressions, your random madness, and all those
-        moments when you make me laugh without even trying.
+
+        I love the little things about you —
+        your smile, your expressions,
+        your random madness,
+        and all those moments when you make me laugh
+        without even trying.
 
         <br><br>
 
@@ -656,25 +1028,34 @@ h2 {
         and honestly, I want a lot more of them.
 
         More laughs.
+
         More stupid selfies.
+
         More arguments about absolutely nothing.
+
         More late-night conversations.
 
-        More "okay last photo" followed by twenty more photos. 😂
+        More "okay last photo"
+        followed by twenty more photos. 😂
 
         <br><br>
 
-        On your birthday, I just want you to remember one thing:
+        On your birthday,
+        I just want you to remember one thing:
 
         <br><br>
 
         Wherever life takes us,
-        I'll always be grateful that our paths crossed.
+        I'll always be grateful
+        that our paths crossed.
 
         <br><br>
 
-        Keep smiling, keep being your crazy beautiful self,
-        and please don't become too famous after seeing this website. 😌
+        Keep smiling,
+        keep being your crazy beautiful self,
+
+        and please don't become too famous
+        after seeing this website. 😌
 
         <br><br>
 
@@ -686,8 +1067,11 @@ h2 {
 
       </p>
 
+
       <div class="signature">
+
         — Yours, Prasant ❤️
+
       </div>
 
     </div>
@@ -697,31 +1081,52 @@ h2 {
 </section>
 
 
-<!-- FINAL -->
+<!-- =========================
+     FINAL
+========================= -->
 
 <section class="final">
 
   <div class="container reveal">
 
     <div class="bigheart">
+
       ❤️
+
     </div>
+
 
     <div class="kicker">
+
       one last thing
+
     </div>
 
+
     <h2>
-      If I had to choose you all over again…
+
+      If I had to choose you
+      all over again…
+
     </h2>
 
+
     <p class="lead">
+
       I'd still choose you.
+
       Every single time.
+
     </p>
 
-    <button class="btn" onclick="celebrate()">
+
+    <button
+      class="btn"
+      onclick="celebrate()"
+    >
+
       Tap for one last surprise 🎁
+
     </button>
 
   </div>
@@ -729,45 +1134,96 @@ h2 {
 </section>
 
 
+<!-- FOOTER -->
+
 <div class="footer">
-  Made with love, chaos & too many feelings — Prasant ❤️
+
+  Made with love,
+  chaos & too many feelings —
+  Prasant ❤️
+
 </div>
 
 
-<!-- FINAL SURPRISE SCREEN -->
+<!-- =========================
+     DRAMATIC FINAL SURPRISE
+========================= -->
 
 <div id="surprise">
 
   <div class="surprise-content">
 
+
     <div class="surprise-heart">
+
       ❤️
+
     </div>
+
 
     <div class="kicker">
+
       Mika, this is for you
+
     </div>
 
+
     <h2>
+
       I'd choose you.
+
     </h2>
 
+
     <p>
-      Today.<br>
-      Tomorrow.<br>
+
+      Today.
+
+      <br>
+
+      Tomorrow.
+
+      <br>
+
       And every version of tomorrow after that. ❤️
+
     </p>
 
-    <p style="margin-top:20px;font-family:'Cormorant Garamond';font-size:28px;color:#ffabc1;">
-      Happy Birthday, my favourite human. 🥹
+
+    <p
+      style="
+      margin-top:20px;
+      font-family:'Cormorant Garamond';
+      font-size:30px;
+      color:#ffabc1;
+      "
+    >
+
+      Happy Birthday,
+      my favourite human. 🥹❤️
+
     </p>
 
-    <p style="font-size:14px;margin-top:15px;">
+
+    <p
+      style="
+      font-size:14px;
+      margin-top:15px;
+      "
+    >
+
       P.S. You still owe me a birthday cake. 🎂😂
+
     </p>
 
-    <button class="btn close-btn" onclick="closeSurprise()">
+
+    <button
+      class="btn close-btn"
+      onclick="closeSurprise()"
+    >
+
       Come back ❤️
+
     </button>
 
   </div>
@@ -777,78 +1233,112 @@ h2 {
 
 <script>
 
+
 /* =========================
    SCROLL REVEAL
 ========================= */
 
-const reveals = document.querySelectorAll(".reveal");
+const reveals =
+  document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-  entries => {
 
-    entries.forEach(entry => {
+const observer =
+  new IntersectionObserver(
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
+    entries => {
 
-    });
+      entries.forEach(entry => {
 
-  },
-  {
-    threshold: 0.12
-  }
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("show");
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.12
+    }
+
+  );
+
+
+reveals.forEach(
+  element => observer.observe(element)
 );
-
-reveals.forEach(element => observer.observe(element));
 
 
 /* =========================
    MUSIC
 ========================= */
 
-const music = document.getElementById("music");
-const musicButton = document.getElementById("musicButton");
+const music =
+  document.getElementById("music");
+
+const musicButton =
+  document.getElementById("musicButton");
 
 let musicPlaying = false;
 
-function startExperience() {
 
-  document.getElementById("story")
+function startExperience(){
+
+  document
+    .getElementById("story")
     .scrollIntoView({
-      behavior: "smooth"
+      behavior:"smooth"
     });
 
-  music.play()
+
+  music
+    .play()
     .then(() => {
+
       musicPlaying = true;
-      musicButton.innerHTML = "🔊 Music ON";
+
+      musicButton.innerHTML =
+        "🔊 Music ON";
+
     })
     .catch(() => {
-      musicButton.innerHTML = "🎵 Tap Music";
+
+      musicButton.innerHTML =
+        "🎵 Tap Music";
+
     });
 
+
   createHearts(15);
+
 }
 
 
-function toggleMusic() {
+/* MUSIC TOGGLE */
 
-  if (musicPlaying) {
+function toggleMusic(){
+
+  if(musicPlaying){
 
     music.pause();
 
     musicPlaying = false;
 
-    musicButton.innerHTML = "🔇 Music OFF";
+    musicButton.innerHTML =
+      "🔇 Music OFF";
 
-  } else {
+  }
+
+  else{
 
     music.play();
 
     musicPlaying = true;
 
-    musicButton.innerHTML = "🔊 Music ON";
+    musicButton.innerHTML =
+      "🔊 Music ON";
 
   }
 
@@ -856,73 +1346,161 @@ function toggleMusic() {
 
 
 /* =========================
-   PHOTO SLIDESHOW
+   SLIDESHOW
 ========================= */
 
-const slides = document.querySelectorAll(".slide");
+const slides =
+  document.querySelectorAll(".slide");
+
+const dots =
+  document.querySelectorAll(".dot");
+
+const slideText =
+  document.getElementById("slideText");
+
+
+const captions = [
+
+  "My favourite person ❤️",
+
+  "One smile and my whole day changes 🥹",
+
+  "A memory I'd keep forever ✨",
+
+  "My beautiful troublemaker 😂❤️",
+
+  "And somehow... I still want more memories with you ❤️"
+
+];
+
 
 let currentSlide = 0;
 
-setInterval(() => {
 
-  slides[currentSlide].classList.remove("active");
+function showSlide(index){
+
+  slides.forEach(
+    slide => slide.classList.remove("active")
+  );
+
+  dots.forEach(
+    dot => dot.classList.remove("active")
+  );
+
+
+  slides[index].classList.add("active");
+
+  dots[index].classList.add("active");
+
+  slideText.innerHTML =
+    captions[index];
+
+}
+
+
+function nextSlide(){
 
   currentSlide++;
 
-  if (currentSlide >= slides.length) {
+  if(currentSlide >= slides.length){
+
     currentSlide = 0;
+
   }
 
-  slides[currentSlide].classList.add("active");
+  showSlide(currentSlide);
 
-}, 3500);
+}
+
+
+setInterval(
+  nextSlide,
+  4500
+);
+
+
+/* CLICK DOTS */
+
+dots.forEach((dot,index) => {
+
+  dot.addEventListener(
+    "click",
+    () => {
+
+      currentSlide = index;
+
+      showSlide(currentSlide);
+
+    }
+  );
+
+});
 
 
 /* =========================
    FALLING HEARTS
 ========================= */
 
-function createHeart() {
+function createHeart(){
 
-  const heart = document.createElement("div");
+  const heart =
+    document.createElement("div");
 
-  heart.className = "falling-heart";
 
-  heart.innerHTML = Math.random() > .5 ? "❤️" : "💕";
+  heart.className =
+    "falling-heart";
 
-  heart.style.left = Math.random() * 100 + "vw";
+
+  heart.innerHTML =
+    Math.random() > .5
+      ? "❤️"
+      : "💕";
+
+
+  heart.style.left =
+    Math.random() * 100 + "vw";
+
 
   heart.style.fontSize =
     (12 + Math.random() * 18) + "px";
 
+
   heart.style.animationDuration =
     (4 + Math.random() * 5) + "s";
+
 
   heart.style.opacity =
     .3 + Math.random() * .7;
 
+
   document.body.appendChild(heart);
 
+
   setTimeout(() => {
+
     heart.remove();
-  }, 10000);
+
+  },10000);
 
 }
 
-setInterval(createHeart, 450);
+
+setInterval(
+  createHeart,
+  450
+);
 
 
-/* =========================
-   EXTRA HEART BURST
-========================= */
+/* EXTRA HEARTS */
 
-function createHearts(amount) {
+function createHearts(amount){
 
-  for (let i = 0; i < amount; i++) {
+  for(let i=0;i<amount;i++){
 
-    setTimeout(() => {
-      createHeart();
-    }, i * 100);
+    setTimeout(
+      createHeart,
+      i * 100
+    );
 
   }
 
@@ -933,44 +1511,62 @@ function createHearts(amount) {
    CONFETTI
 ========================= */
 
-const canvas = document.getElementById("confetti");
-const ctx = canvas.getContext("2d");
+const canvas =
+  document.getElementById("confetti");
+
+const ctx =
+  canvas.getContext("2d");
+
 
 let confettiPieces = [];
 
-function resizeCanvas() {
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+function resizeCanvas(){
+
+  canvas.width =
+    window.innerWidth;
+
+  canvas.height =
+    window.innerHeight;
 
 }
 
+
 resizeCanvas();
 
-window.addEventListener("resize", resizeCanvas);
+
+window.addEventListener(
+  "resize",
+  resizeCanvas
+);
 
 
-function createConfetti() {
+function createConfetti(){
 
   confettiPieces = [];
 
-  for (let i = 0; i < 180; i++) {
+
+  for(let i=0;i<220;i++){
 
     confettiPieces.push({
 
-      x: window.innerWidth / 2,
+      x:
+        window.innerWidth / 2,
 
-      y: window.innerHeight / 2,
+      y:
+        window.innerHeight / 2,
 
-      size: 5 + Math.random() * 8,
+      size:
+        5 + Math.random() * 8,
 
       speedX:
-        (Math.random() - .5) * 12,
+        (Math.random() - .5) * 14,
 
       speedY:
-        (Math.random() - .5) * 14 - 4,
+        (Math.random() - .5) * 15 - 4,
 
-      gravity: .25,
+      gravity:
+        .25,
 
       rotation:
         Math.random() * 360,
@@ -978,18 +1574,20 @@ function createConfetti() {
       rotationSpeed:
         (Math.random() - .5) * 10,
 
-      life: 150
+      life:
+        170
 
     });
 
   }
+
 
   animateConfetti();
 
 }
 
 
-function animateConfetti() {
+function animateConfetti(){
 
   ctx.clearRect(
     0,
@@ -998,51 +1596,81 @@ function animateConfetti() {
     canvas.height
   );
 
+
   confettiPieces.forEach(piece => {
 
-    piece.x += piece.speedX;
 
-    piece.y += piece.speedY;
+    piece.x +=
+      piece.speedX;
 
-    piece.speedY += piece.gravity;
 
-    piece.rotation += piece.rotationSpeed;
+    piece.y +=
+      piece.speedY;
+
+
+    piece.speedY +=
+      piece.gravity;
+
+
+    piece.rotation +=
+      piece.rotationSpeed;
+
 
     piece.life--;
 
+
     ctx.save();
+
 
     ctx.translate(
       piece.x,
       piece.y
     );
 
+
     ctx.rotate(
-      piece.rotation * Math.PI / 180
+      piece.rotation *
+      Math.PI / 180
     );
+
 
     ctx.fillStyle =
-      `hsl(${Math.random() * 360}, 90%, 70%)`;
+      `hsl(${Math.random()*360},90%,70%)`;
+
 
     ctx.fillRect(
+
       -piece.size / 2,
+
       -piece.size / 2,
+
       piece.size,
+
       piece.size
+
     );
+
 
     ctx.restore();
 
   });
 
+
   confettiPieces =
-    confettiPieces.filter(piece => piece.life > 0);
+    confettiPieces.filter(
+      piece => piece.life > 0
+    );
 
-  if (confettiPieces.length > 0) {
 
-    requestAnimationFrame(animateConfetti);
+  if(confettiPieces.length > 0){
 
-  } else {
+    requestAnimationFrame(
+      animateConfetti
+    );
+
+  }
+
+  else{
 
     ctx.clearRect(
       0,
@@ -1060,30 +1688,35 @@ function animateConfetti() {
    FINAL SURPRISE
 ========================= */
 
-function celebrate() {
+function celebrate(){
 
   createConfetti();
 
-  createHearts(40);
+  createHearts(50);
+
 
   const surprise =
     document.getElementById("surprise");
 
+
   surprise.classList.add("show");
 
-  music.play()
+
+  music
+    .play()
     .catch(() => {});
 
 }
 
 
-function closeSurprise() {
+function closeSurprise(){
 
   document
     .getElementById("surprise")
     .classList.remove("show");
 
 }
+
 
 </script>
 
