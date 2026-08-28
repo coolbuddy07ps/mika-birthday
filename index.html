@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,6 +10,11 @@
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
   box-sizing:border-box;
@@ -47,33 +53,29 @@ body::before{
     #09070b;
 }
 
+
+/* =========================================
+   GENERAL
+========================================= */
+
 section{
   position:relative;
+
   min-height:100vh;
+
   padding:80px 20px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 }
 
 .container{
   width:min(1050px,100%);
+
   margin:auto;
-}
-
-.hero{
-  text-align:center;
-  min-height:100svh;
-  flex-direction:column;
-}
-
-.kicker{
-  letter-spacing:4px;
-  text-transform:uppercase;
-  font-size:11px;
-  color:#f6a5bf;
-  margin-bottom:18px;
 }
 
 h1,
@@ -81,85 +83,173 @@ h2{
   font-family:"Cormorant Garamond",serif;
 }
 
+.kicker{
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  font-size:11px;
+
+  color:#f6a5bf;
+
+  margin-bottom:18px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+  text-align:center;
+
+  min-height:100svh;
+
+  flex-direction:column;
+
+  padding-top:80px;
+}
+
 h1{
   font-size:clamp(64px,16vw,150px);
+
   line-height:.8;
+
   font-weight:600;
 }
 
 .hero h1 span{
   display:block;
+
   color:#ff8eaf;
+
+  margin-top:8px;
 }
 
 .subtitle{
   max-width:650px;
+
   margin:30px auto;
+
   color:#d8cfd5;
+
   line-height:1.8;
+
   font-size:15px;
 }
 
 .btn{
   border:1px solid rgba(255,255,255,.22);
+
   background:rgba(255,255,255,.07);
+
   color:#fff;
+
   border-radius:999px;
+
   padding:14px 25px;
+
   cursor:pointer;
+
   backdrop-filter:blur(10px);
+
   font-family:Poppins;
+
   transition:.3s;
 }
 
 .btn:hover{
   transform:translateY(-3px) scale(1.03);
+
   background:rgba(255,255,255,.14);
 }
 
-.music-btn{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:50;
-
-  border:1px solid rgba(255,255,255,.2);
-  background:rgba(20,15,22,.75);
-  color:#fff;
-
-  border-radius:50px;
-  padding:10px 16px;
-
-  cursor:pointer;
-  backdrop-filter:blur(10px);
+.btn:active{
+  transform:scale(.96);
 }
 
 .scroll{
   position:absolute;
+
   bottom:25px;
+
   font-size:10px;
+
   letter-spacing:3px;
+
   color:#9c939b;
 }
 
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+.music-btn{
+  position:fixed;
+
+  top:20px;
+
+  right:20px;
+
+  z-index:100;
+
+  border:1px solid rgba(255,255,255,.2);
+
+  background:rgba(20,15,22,.78);
+
+  color:#fff;
+
+  border-radius:50px;
+
+  padding:10px 16px;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(12px);
+
+  font-family:Poppins;
+
+  transition:.3s;
+}
+
+.music-btn:hover{
+  background:rgba(255,255,255,.14);
+
+  transform:scale(1.03);
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
 h2{
   font-size:clamp(42px,8vw,78px);
+
   text-align:center;
+
   font-weight:500;
+
+  line-height:.95;
 }
 
 .lead{
   text-align:center;
+
   color:#bdb3ba;
-  margin:15px auto 45px;
+
+  margin:18px auto 45px;
+
   max-width:650px;
+
   line-height:1.7;
 }
 
 
-/* ===================================
+/* =========================================
    ONE PHOTO SLIDESHOW
-=================================== */
+========================================= */
 
 .slideshow{
   position:relative;
@@ -170,7 +260,7 @@ h2{
 
   min-height:450px;
 
-  margin:40px auto;
+  margin:40px auto 0;
 
   border-radius:30px;
 
@@ -186,12 +276,12 @@ h2{
 }
 
 .slide{
-
   position:absolute;
 
   inset:0;
 
   width:100%;
+
   height:100%;
 
   object-fit:cover;
@@ -206,17 +296,15 @@ h2{
 }
 
 .slide.active{
-
   opacity:1;
 
   transform:scale(1);
 }
 
 
-/* Slideshow dark overlay */
+/* slideshow overlay */
 
 .slideshow::after{
-
   content:"";
 
   position:absolute;
@@ -228,22 +316,21 @@ h2{
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.05),
-      transparent 50%,
-      rgba(0,0,0,.4)
+      rgba(0,0,0,.02),
+      transparent 48%,
+      rgba(0,0,0,.55)
     );
 }
 
 
-/* Slideshow caption */
+/* slideshow caption */
 
 .slide-text{
-
   position:absolute;
 
-  bottom:25px;
-
   left:50%;
+
+  bottom:25px;
 
   transform:translateX(-50%);
 
@@ -255,7 +342,7 @@ h2{
 
   font-family:"Cormorant Garamond",serif;
 
-  font-size:28px;
+  font-size:30px;
 
   color:#fff;
 
@@ -264,21 +351,23 @@ h2{
 }
 
 
-/* Dots */
+/* =========================================
+   SLIDESHOW DOTS
+========================================= */
 
 .dots{
-
   display:flex;
 
   justify-content:center;
 
+  align-items:center;
+
   gap:8px;
 
-  margin-top:20px;
+  margin-top:18px;
 }
 
 .dot{
-
   width:8px;
 
   height:8px;
@@ -289,10 +378,10 @@ h2{
 
   transition:.4s;
 
+  cursor:pointer;
 }
 
 .dot.active{
-
   width:25px;
 
   border-radius:20px;
@@ -301,12 +390,11 @@ h2{
 }
 
 
-/* ===================================
+/* =========================================
    REASONS
-=================================== */
+========================================= */
 
 .reasons{
-
   display:grid;
 
   grid-template-columns:repeat(3,1fr);
@@ -317,7 +405,6 @@ h2{
 }
 
 .reason{
-
   padding:27px 20px;
 
   border-radius:22px;
@@ -332,14 +419,12 @@ h2{
 }
 
 .reason:hover{
-
   transform:translateY(-8px);
 
   background:rgba(255,255,255,.08);
 }
 
 .reason b{
-
   display:block;
 
   font-family:"Cormorant Garamond",serif;
@@ -352,7 +437,6 @@ h2{
 }
 
 .reason p{
-
   font-size:13px;
 
   color:#bdb3ba;
@@ -361,12 +445,11 @@ h2{
 }
 
 
-/* ===================================
+/* =========================================
    LOVE LETTER
-=================================== */
+========================================= */
 
 .letter{
-
   max-width:760px;
 
   margin:auto;
@@ -389,7 +472,6 @@ h2{
 }
 
 .letter .hello{
-
   font-family:"Cormorant Garamond",serif;
 
   font-size:38px;
@@ -400,7 +482,6 @@ h2{
 }
 
 .signature{
-
   margin-top:28px;
 
   text-align:right;
@@ -413,26 +494,23 @@ h2{
 }
 
 
-/* ===================================
+/* =========================================
    FINAL SECTION
-=================================== */
+========================================= */
 
 .final{
-
   text-align:center;
 
   min-height:100svh;
 }
 
 .final h2{
-
   max-width:800px;
 
   margin:20px auto;
 }
 
 .bigheart{
-
   font-size:75px;
 
   animation:pulse 1.5s infinite;
@@ -447,19 +525,18 @@ h2{
 }
 
 
-/* ===================================
+/* =========================================
    FINAL SURPRISE
-=================================== */
+========================================= */
 
 #surprise{
-
   display:none;
 
   position:fixed;
 
   inset:0;
 
-  z-index:100;
+  z-index:200;
 
   background:
     radial-gradient(
@@ -478,28 +555,24 @@ h2{
 }
 
 #surprise.show{
-
   display:flex;
 
   animation:fadeIn 1.2s ease;
 }
 
 .surprise-content{
-
   max-width:850px;
 
   animation:zoomIn 1.2s ease;
 }
 
 .surprise-heart{
-
   font-size:90px;
 
   animation:pulse 1.2s infinite;
 }
 
 .surprise-content h2{
-
   font-size:clamp(50px,10vw,100px);
 
   color:#ff9db9;
@@ -508,7 +581,6 @@ h2{
 }
 
 .surprise-content p{
-
   color:#d8cfd5;
 
   font-size:18px;
@@ -517,7 +589,6 @@ h2{
 }
 
 .close-btn{
-
   margin-top:30px;
 }
 
@@ -537,23 +608,24 @@ h2{
 
   from{
     transform:scale(.7);
+
     opacity:0;
   }
 
   to{
     transform:scale(1);
+
     opacity:1;
   }
 
 }
 
 
-/* ===================================
+/* =========================================
    FALLING HEARTS
-=================================== */
+========================================= */
 
 .falling-heart{
-
   position:fixed;
 
   top:-30px;
@@ -568,7 +640,6 @@ h2{
 @keyframes fall{
 
   to{
-
     transform:
       translateY(110vh)
       rotate(360deg);
@@ -579,12 +650,11 @@ h2{
 }
 
 
-/* ===================================
+/* =========================================
    CONFETTI
-=================================== */
+========================================= */
 
 #confetti{
-
   position:fixed;
 
   inset:0;
@@ -595,16 +665,15 @@ h2{
 
   pointer-events:none;
 
-  z-index:90;
+  z-index:190;
 }
 
 
-/* ===================================
-   SCROLL REVEAL
-=================================== */
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
 
 .reveal{
-
   opacity:0;
 
   transform:translateY(25px);
@@ -613,19 +682,17 @@ h2{
 }
 
 .reveal.show{
-
   opacity:1;
 
   transform:none;
 }
 
 
-/* ===================================
+/* =========================================
    FOOTER
-=================================== */
+========================================= */
 
 .footer{
-
   padding:30px;
 
   text-align:center;
@@ -638,51 +705,369 @@ h2{
 }
 
 
-/* ===================================
-   MOBILE
-=================================== */
+/* =========================================
+   MOBILE POLISH
+========================================= */
 
 @media(max-width:700px){
 
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    width:100%;
+
+    overflow-x:hidden;
+  }
+
+
+  /* sections */
+
   section{
-    padding:70px 18px;
+    min-height:100svh;
+
+    padding:65px 16px;
+  }
+
+
+  /* hero */
+
+  .hero{
+    min-height:100svh;
+
+    padding:
+      70px 18px
+      50px;
+  }
+
+  .kicker{
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    line-height:1.6;
+
+    margin-bottom:15px;
   }
 
   h1{
-    font-size:clamp(58px,18vw,100px);
+    font-size:clamp(
+      58px,
+      18vw,
+      94px
+    );
+
+    line-height:.86;
   }
 
-  .slideshow{
-
-    height:65vh;
-
-    min-height:430px;
-
-    border-radius:22px;
+  .hero h1 span{
+    margin-top:8px;
   }
 
-  .reasons{
+  .subtitle{
+    font-size:13px;
 
-    grid-template-columns:1fr;
+    line-height:1.8;
+
+    margin:25px auto;
+
+    max-width:340px;
   }
 
-  .letter{
+  .btn{
+    padding:13px 21px;
 
-    padding:30px 22px;
+    font-size:13px;
+
+    min-height:46px;
   }
+
+  .scroll{
+    bottom:18px;
+
+    font-size:8px;
+
+    letter-spacing:2.5px;
+  }
+
+
+  /* music */
 
   .music-btn{
-
     top:12px;
 
     right:12px;
 
-    font-size:12px;
+    padding:9px 13px;
+
+    font-size:11px;
+
+    border-radius:30px;
+  }
+
+
+  /* slideshow section */
+
+  #story{
+    padding-top:65px;
+
+    padding-bottom:70px;
+  }
+
+  #story h2{
+    font-size:clamp(
+      42px,
+      12vw,
+      62px
+    );
+
+    line-height:.95;
+
+    padding:0 5px;
+  }
+
+  #story .lead{
+    font-size:13px;
+
+    margin:18px auto 30px;
+
+    padding:0 8px;
+  }
+
+
+  /* slideshow */
+
+  .slideshow{
+    width:100%;
+
+    height:72svh;
+
+    min-height:420px;
+
+    max-height:620px;
+
+    margin:25px auto 0;
+
+    border-radius:22px;
+
+    box-shadow:
+      0 20px 55px rgba(0,0,0,.55);
+  }
+
+  .slide{
+    object-position:center;
   }
 
   .slide-text{
+    bottom:20px;
 
-    font-size:23px;
+    width:88%;
+
+    font-size:24px;
+
+    line-height:1.2;
+  }
+
+
+  /* dots */
+
+  .dots{
+    margin-top:16px;
+
+    gap:7px;
+  }
+
+  .dot{
+    width:8px;
+
+    height:8px;
+
+    padding:4px;
+
+    background-clip:content-box;
+
+    box-sizing:content-box;
+  }
+
+  .dot.active{
+    width:23px;
+  }
+
+
+  /* reasons */
+
+  .reasons{
+    grid-template-columns:1fr;
+
+    gap:13px;
+
+    margin-top:30px;
+  }
+
+  .reason{
+    padding:23px 18px;
+
+    border-radius:20px;
+  }
+
+  .reason b{
+    font-size:27px;
+  }
+
+  .reason p{
+    font-size:13px;
+
+    line-height:1.7;
+  }
+
+
+  /* letter */
+
+  .letter{
+    width:100%;
+
+    padding:30px 21px;
+
+    border-radius:22px;
+
+    font-size:14px;
+
+    line-height:1.9;
+  }
+
+  .letter .hello{
+    font-size:36px;
+
+    margin-bottom:10px;
+  }
+
+  .signature{
+    margin-top:25px;
+
+    font-size:27px;
+  }
+
+
+  /* final */
+
+  .final{
+    min-height:100svh;
+
+    padding-left:18px;
+
+    padding-right:18px;
+  }
+
+  .bigheart{
+    font-size:65px;
+  }
+
+  .final h2{
+    font-size:clamp(
+      45px,
+      12vw,
+      70px
+    );
+
+    line-height:.95;
+
+    margin:18px auto;
+  }
+
+  .final .lead{
+    font-size:14px;
+
+    margin-bottom:30px;
+  }
+
+
+  /* surprise */
+
+  #surprise{
+    padding:20px;
+
+    overflow-y:auto;
+  }
+
+  .surprise-content{
+    width:100%;
+
+    max-width:500px;
+
+    padding:20px 5px;
+  }
+
+  .surprise-heart{
+    font-size:70px;
+  }
+
+  .surprise-content h2{
+    font-size:clamp(
+      55px,
+      15vw,
+      90px
+    );
+
+    line-height:.9;
+
+    margin:18px 0 25px;
+  }
+
+  .surprise-content p{
+    font-size:15px;
+
+    line-height:1.8;
+  }
+
+  .surprise-content p[style]{
+    font-size:25px !important;
+  }
+
+  .close-btn{
+    margin-top:25px;
+  }
+
+
+  /* footer */
+
+  .footer{
+    padding:25px 15px;
+
+    font-size:9px;
+
+    line-height:1.6;
+  }
+
+
+  /* touch */
+
+  button,
+  .dot{
+    -webkit-tap-highlight-color:transparent;
+
+    touch-action:manipulation;
+  }
+
+
+  /* small phones */
+
+  @media(max-height:700px){
+
+    .hero{
+      padding-top:60px;
+    }
+
+    .slideshow{
+      height:70vh;
+
+      min-height:370px;
+    }
+
+    .scroll{
+      display:none;
+    }
+
   }
 
 }
@@ -695,21 +1080,34 @@ h2{
 <body>
 
 
-<!-- MUSIC -->
+<!-- =========================================
+     BACKGROUND MUSIC
+========================================= -->
 
-<audio id="music" loop>
+<audio
+  id="music"
+  loop
+  preload="auto"
+>
 
-  <source src="./music.mp3" type="audio/mpeg">
+  <source
+    src="./birthday.mp3"
+    type="audio/mpeg"
+  >
 
 </audio>
 
+
+<!-- MUSIC BUTTON -->
 
 <button
   class="music-btn"
   id="musicButton"
   onclick="toggleMusic()"
 >
+
   🎵 Music
+
 </button>
 
 
@@ -718,17 +1116,20 @@ h2{
 <canvas id="confetti"></canvas>
 
 
-<!-- ===================================
+<!-- =========================================
      HERO
-=================================== -->
+========================================= -->
 
 <section class="hero">
 
   <div class="container reveal show">
 
     <div class="kicker">
+
       A little birthday surprise from Prasant
+
     </div>
+
 
     <h1>
 
@@ -740,6 +1141,7 @@ h2{
 
     </h1>
 
+
     <p class="subtitle">
 
       29 August 2001 — the day the world got you.
@@ -748,6 +1150,7 @@ h2{
       to have you in my story. ❤️
 
     </p>
+
 
     <button
       class="btn"
@@ -770,13 +1173,14 @@ h2{
 </section>
 
 
-<!-- ===================================
-     ONLY PHOTO SLIDESHOW
-=================================== -->
+<!-- =========================================
+     PHOTO SLIDESHOW
+========================================= -->
 
 <section id="story">
 
   <div class="container">
+
 
     <div class="reveal">
 
@@ -786,26 +1190,30 @@ h2{
 
       </div>
 
+
       <h2>
 
         Some moments I'd keep forever.
 
       </h2>
 
+
       <p class="lead">
 
         Five photos. A thousand memories.
 
-        And one very cute troublemaker named Mika. 😌❤️
+        And one very cute troublemaker
+        named Mika. 😌❤️
 
       </p>
 
     </div>
 
 
-    <!-- ONE SLIDESHOW ONLY -->
+    <!-- ONLY ONE SLIDESHOW -->
 
     <div class="slideshow">
+
 
       <img
         src="./photo1.jpeg"
@@ -813,11 +1221,13 @@ h2{
         alt="Mika ❤️"
       >
 
+
       <img
         src="./photo2.jpeg"
         class="slide"
         alt="Mika ❤️"
       >
+
 
       <img
         src="./photo3.jpeg"
@@ -825,11 +1235,13 @@ h2{
         alt="Mika ❤️"
       >
 
+
       <img
         src="./photo4.jpeg"
         class="slide"
         alt="Mika ❤️"
       >
+
 
       <img
         src="./photo5.jpeg"
@@ -837,17 +1249,20 @@ h2{
         alt="Mika ❤️"
       >
 
+
       <div
         class="slide-text"
         id="slideText"
       >
+
         My favourite person ❤️
+
       </div>
 
     </div>
 
 
-    <!-- SLIDE INDICATORS -->
+    <!-- DOTS -->
 
     <div class="dots">
 
@@ -868,9 +1283,9 @@ h2{
 </section>
 
 
-<!-- ===================================
-     REASONS
-=================================== -->
+<!-- =========================================
+     WHY YOU ARE MY FAVOURITE
+========================================= -->
 
 <section>
 
@@ -878,11 +1293,13 @@ h2{
 
     <div class="reveal">
 
+
       <div class="kicker">
 
         things I probably don't say enough
 
       </div>
+
 
       <h2>
 
@@ -954,15 +1371,16 @@ h2{
 </section>
 
 
-<!-- ===================================
+<!-- =========================================
      LOVE LETTER
-=================================== -->
+========================================= -->
 
 <section>
 
   <div class="container">
 
     <div class="letter reveal">
+
 
       <div class="hello">
 
@@ -992,8 +1410,11 @@ h2{
         and honestly, I want a lot more of them.
 
         More laughs.
+
         More stupid selfies.
+
         More arguments about absolutely nothing.
+
         More late-night conversations.
 
         More "okay last photo"
@@ -1035,6 +1456,7 @@ h2{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1042,13 +1464,14 @@ h2{
 </section>
 
 
-<!-- ===================================
-     FINAL
-=================================== -->
+<!-- =========================================
+     FINAL SECTION
+========================================= -->
 
 <section class="final">
 
   <div class="container reveal">
+
 
     <div class="bigheart">
 
@@ -1090,6 +1513,7 @@ h2{
 
     </button>
 
+
   </div>
 
 </section>
@@ -1106,13 +1530,14 @@ h2{
 </div>
 
 
-<!-- ===================================
+<!-- =========================================
      DRAMATIC FINAL SURPRISE
-=================================== -->
+========================================= -->
 
 <div id="surprise">
 
   <div class="surprise-content">
+
 
     <div class="surprise-heart">
 
@@ -1145,17 +1570,18 @@ h2{
 
       <br>
 
-      And every version of tomorrow after that. ❤️
+      And every version of tomorrow
+      after that. ❤️
 
     </p>
 
 
     <p
       style="
-      margin-top:20px;
-      font-family:'Cormorant Garamond';
-      font-size:30px;
-      color:#ffabc1;
+        margin-top:20px;
+        font-family:'Cormorant Garamond';
+        font-size:30px;
+        color:#ffabc1;
       "
     >
 
@@ -1167,12 +1593,13 @@ h2{
 
     <p
       style="
-      font-size:14px;
-      margin-top:15px;
+        font-size:14px;
+        margin-top:15px;
       "
     >
 
-      P.S. You still owe me a birthday cake. 🎂😂
+      P.S. You still owe me
+      a birthday cake. 🎂😂
 
     </p>
 
@@ -1186,6 +1613,7 @@ h2{
 
     </button>
 
+
   </div>
 
 </div>
@@ -1194,9 +1622,9 @@ h2{
 <script>
 
 
-/* ===================================
+/* =========================================
    SCROLL REVEAL
-=================================== */
+========================================= */
 
 const reveals =
   document.querySelectorAll(".reveal");
@@ -1231,9 +1659,9 @@ reveals.forEach(
 );
 
 
-/* ===================================
+/* =========================================
    MUSIC
-=================================== */
+========================================= */
 
 const music =
   document.getElementById("music");
@@ -1291,21 +1719,31 @@ function toggleMusic(){
 
   else{
 
-    music.play();
+    music
+      .play()
+      .then(() => {
 
-    musicPlaying = true;
+        musicPlaying = true;
 
-    musicButton.innerHTML =
-      "🔊 Music ON";
+        musicButton.innerHTML =
+          "🔊 Music ON";
+
+      })
+      .catch(() => {
+
+        musicButton.innerHTML =
+          "🎵 Tap Music";
+
+      });
 
   }
 
 }
 
 
-/* ===================================
+/* =========================================
    SLIDESHOW
-=================================== */
+========================================= */
 
 const slides =
   document.querySelectorAll(".slide");
@@ -1360,7 +1798,9 @@ function nextSlide(){
 
   currentSlide++;
 
-  if(currentSlide >= slides.length){
+  if(
+    currentSlide >= slides.length
+  ){
 
     currentSlide = 0;
 
@@ -1377,27 +1817,29 @@ setInterval(
 );
 
 
-/* CLICK DOTS */
+/* dot controls */
 
-dots.forEach((dot,index) => {
+dots.forEach(
+  (dot,index) => {
 
-  dot.addEventListener(
-    "click",
-    () => {
+    dot.addEventListener(
+      "click",
+      () => {
 
-      currentSlide = index;
+        currentSlide = index;
 
-      showSlide(currentSlide);
+        showSlide(currentSlide);
 
-    }
-  );
+      }
+    );
 
-});
+  }
+);
 
 
-/* ===================================
+/* =========================================
    FALLING HEARTS
-=================================== */
+========================================= */
 
 function createHeart(){
 
@@ -1420,25 +1862,33 @@ function createHeart(){
 
 
   heart.style.fontSize =
-    (12 + Math.random() * 18) + "px";
+    (
+      12 +
+      Math.random() * 18
+    ) + "px";
 
 
   heart.style.animationDuration =
-    (4 + Math.random() * 5) + "s";
+    (
+      4 +
+      Math.random() * 5
+    ) + "s";
 
 
   heart.style.opacity =
-    .3 + Math.random() * .7;
+    .3 +
+    Math.random() * .7;
 
 
-  document.body.appendChild(heart);
+  document.body.appendChild(
+    heart
+  );
 
 
-  setTimeout(() => {
-
-    heart.remove();
-
-  },10000);
+  setTimeout(
+    () => heart.remove(),
+    10000
+  );
 
 }
 
@@ -1449,11 +1899,13 @@ setInterval(
 );
 
 
-/* EXTRA HEARTS */
-
 function createHearts(amount){
 
-  for(let i=0;i<amount;i++){
+  for(
+    let i=0;
+    i<amount;
+    i++
+  ){
 
     setTimeout(
       createHeart,
@@ -1465,16 +1917,15 @@ function createHearts(amount){
 }
 
 
-/* ===================================
+/* =========================================
    CONFETTI
-=================================== */
+========================================= */
 
 const canvas =
   document.getElementById("confetti");
 
 const ctx =
   canvas.getContext("2d");
-
 
 let confettiPieces = [];
 
@@ -1504,7 +1955,11 @@ function createConfetti(){
   confettiPieces = [];
 
 
-  for(let i=0;i<220;i++){
+  for(
+    let i=0;
+    i<220;
+    i++
+  ){
 
     confettiPieces.push({
 
@@ -1515,25 +1970,30 @@ function createConfetti(){
         window.innerHeight / 2,
 
       size:
-        5 + Math.random() * 8,
+        5 +
+        Math.random() * 8,
 
       speedX:
-        (Math.random() - .5) * 14,
+        (
+          Math.random() - .5
+        ) * 14,
 
       speedY:
-        (Math.random() - .5) * 15 - 4,
+        (
+          Math.random() - .5
+        ) * 15 - 4,
 
-      gravity:
-        .25,
+      gravity:.25,
 
       rotation:
         Math.random() * 360,
 
       rotationSpeed:
-        (Math.random() - .5) * 10,
+        (
+          Math.random() - .5
+        ) * 10,
 
-      life:
-        170
+      life:170
 
     });
 
@@ -1555,48 +2015,64 @@ function animateConfetti(){
   );
 
 
-  confettiPieces.forEach(piece => {
+  confettiPieces.forEach(
+    piece => {
 
-    piece.x += piece.speedX;
+      piece.x +=
+        piece.speedX;
 
-    piece.y += piece.speedY;
+      piece.y +=
+        piece.speedY;
 
-    piece.speedY += piece.gravity;
+      piece.speedY +=
+        piece.gravity;
 
-    piece.rotation += piece.rotationSpeed;
+      piece.rotation +=
+        piece.rotationSpeed;
 
-    piece.life--;
+      piece.life--;
 
-    ctx.save();
 
-    ctx.translate(
-      piece.x,
-      piece.y
-    );
+      ctx.save();
 
-    ctx.rotate(
-      piece.rotation *
-      Math.PI / 180
-    );
 
-    ctx.fillStyle =
-      `hsl(${Math.random()*360},90%,70%)`;
+      ctx.translate(
+        piece.x,
+        piece.y
+      );
 
-    ctx.fillRect(
 
-      -piece.size / 2,
+      ctx.rotate(
+        piece.rotation *
+        Math.PI / 180
+      );
 
-      -piece.size / 2,
 
-      piece.size,
+      ctx.fillStyle =
+        `hsl(
+          ${Math.random()*360},
+          90%,
+          70%
+        )`;
 
-      piece.size
 
-    );
+      ctx.fillRect(
 
-    ctx.restore();
+        -piece.size / 2,
 
-  });
+        -piece.size / 2,
+
+        piece.size,
+
+        piece.size
+
+      );
+
+
+      ctx.restore();
+
+    }
+  );
 
 
   confettiPieces =
@@ -1605,7 +2081,9 @@ function animateConfetti(){
     );
 
 
-  if(confettiPieces.length > 0){
+  if(
+    confettiPieces.length > 0
+  ){
 
     requestAnimationFrame(
       animateConfetti
@@ -1627,9 +2105,9 @@ function animateConfetti(){
 }
 
 
-/* ===================================
+/* =========================================
    FINAL SURPRISE
-=================================== */
+========================================= */
 
 function celebrate(){
 
@@ -1637,13 +2115,24 @@ function celebrate(){
 
   createHearts(50);
 
+
   const surprise =
     document.getElementById("surprise");
 
+
   surprise.classList.add("show");
+
 
   music
     .play()
+    .then(() => {
+
+      musicPlaying = true;
+
+      musicButton.innerHTML =
+        "🔊 Music ON";
+
+    })
     .catch(() => {});
 
 }
