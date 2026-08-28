@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mika ❤️ — From Prasant</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#09070b;color:#fff;overflow-x:hidden;
+  font-family:Poppins,sans-serif;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,91,145,.16),transparent 28%),
+    radial-gradient(circle at 80% 70%,rgba(172,91,255,.14),transparent 30%),
+    #09070b;
+}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:0}
+section{position:relative;min-height:100vh;padding:80px 20px;display:flex;align-items:center;justify-content:center}
+.container{width:min(1050px,100%);margin:auto}
+.hero{text-align:center;min-height:100svh;flex-direction:column}
+.kicker{letter-spacing:4px;text-transform:uppercase;font-size:11px;color:#f6a5bf;margin-bottom:18px}
+h1,h2,.script{font-family:"Cormorant Garamond",serif}
+h1{font-size:clamp(64px,16vw,150px);line-height:.8;font-weight:600}
+.hero h1 span{display:block;color:#ff8eaf}
+.subtitle{max-width:650px;margin:30px auto;color:#d8cfd5;line-height:1.8;font-size:15px}
+.btn{
+  border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);
+  color:#fff;border-radius:999px;padding:14px 25px;cursor:pointer;
+  backdrop-filter:blur(10px);font-family:Poppins;transition:.3s
+}
+.btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.12)}
+.scroll{position:absolute;bottom:25px;font-size:10px;letter-spacing:3px;color:#9c939b}
+h2{font-size:clamp(42px,8vw,78px);text-align:center;font-weight:500}
+.lead{text-align:center;color:#bdb3ba;margin:15px auto 45px;max-width:600px;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{position:relative;overflow:hidden;border-radius:24px;background:#151217;min-height:330px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.card img{width:100%;height:100%;min-height:330px;object-fit:cover;display:block;transition:transform .8s}
+.card:hover img{transform:scale(1.045)}
+.card:nth-child(2){transform:translateY(45px)}
+.card:nth-child(3){transform:translateY(-20px)}
+.caption{
+  position:absolute;left:16px;right:16px;bottom:16px;padding:13px 15px;
+  border-radius:16px;background:rgba(0,0,0,.45);backdrop-filter:blur(12px);
+  font-family:"Cormorant Garamond";font-size:22px
+}
+.letter{
+  max-width:760px;margin:auto;padding:42px 34px;border:1px solid rgba(255,255,255,.12);
+  border-radius:28px;background:rgba(255,255,255,.045);backdrop-filter:blur(15px);
+  line-height:2;font-size:16px;color:#ded6dc
+}
+.letter .hello{font-family:"Cormorant Garamond";font-size:38px;color:#ff9db9;margin-bottom:12px}
+.signature{margin-top:28px;text-align:right;font-family:"Cormorant Garamond";font-size:28px;color:#fff}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.reason{padding:27px 20px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);text-align:center}
+.reason b{display:block;font-family:"Cormorant Garamond";font-size:26px;margin-bottom:8px;color:#ffabc1}
+.reason p{font-size:13px;color:#bdb3ba;line-height:1.6}
+.final{text-align:center;min-height:100svh}
+.final h2{max-width:800px;margin:20px auto}
+.bigheart{font-size:75px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.footer{padding:30px;text-align:center;color:#6f6870;font-size:11px;letter-spacing:1px}
+.reveal{opacity:0;transform:translateY(25px);transition:1s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:700px){
+ .gallery{grid-template-columns:1fr}
+ .card:nth-child(2),.card:nth-child(3){transform:none}
+ .card,.card img{min-height:430px}
+ .reasons{grid-template-columns:1fr}
+ .letter{padding:30px 22px}
+}
+</style>
+</head>
+<body>
+<canvas id="hearts"></canvas>
+
+<section class="hero">
+  <div class="container reveal show">
+    <div class="kicker">A little birthday surprise from Prasant</div>
+    <h1>Happy Birthday<span>Mika ❤️</span></h1>
+    <p class="subtitle">29 August 2001 — the day the world got you. And somehow, I got lucky enough to have you in my story.</p>
+    <button class="btn" onclick="document.getElementById('story').scrollIntoView()">Open your surprise ✨</button>
+  </div>
+  <div class="scroll">SCROLL FOR YOUR SURPRISE ↓</div>
+</section>
+
+<section id="story">
+ <div class="container">
+   <div class="reveal">
+    <div class="kicker">our little collection of chaos</div>
+    <h2>Some moments I’d keep forever.</h2>
+    <p class="lead">Four photos. A thousand memories. And one very cute troublemaker named Mika. 😌❤️</p>
+   </div>
+   <div class="gallery">
+    <div class="card reveal"><img src="photos/photo1.jpeg"><div class="caption">“Us, looking suspiciously cute.” ❤️</div></div>
+    <div class="card reveal"><img src="photos/photo2.jpeg"><div class="caption">“Okay fine… you win. You're adorable.” 😂</div></div>
+    <div class="card reveal"><img src="photos/photo3.jpeg"><div class="caption">“That smile is one of my favourite things.”</div></div>
+    <div class="card reveal"><img src="photos/photo4.jpeg"><div class="caption">“My favourite person to do absolutely nothing with.” 🥹</div></div>
+    <div class="card reveal"><img src="photos/photo5.jpeg"><div class="caption">“Okay madam… that serious face is still cute. 😂❤️”</div></div>
+   </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+   <div class="reveal">
+    <div class="kicker">things I probably don't say enough</div>
+    <h2>Why you are my favourite.</h2>
+    <div class="reasons">
+      <div class="reason"><b>Your smile</b><p>Somehow it can fix a bad day without even trying.</p></div>
+      <div class="reason"><b>Your madness 😂</b><p>Life with you is never boring. Slightly dangerous, but never boring.</p></div>
+      <div class="reason"><b>Your heart ❤️</b><p>The kindness, care and warmth you carry make you impossible not to love.</p></div>
+    </div>
+   </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+   <div class="letter reveal">
+     <div class="hello">Dear Mika,</div>
+     <p>
+       Happy Birthday to the girl who somehow became one of the most important parts of my life. ❤️
+       <br><br>
+       I hope you know how special you are to me. I love the little things about you — your smile,
+       your expressions, your random madness, and all those moments when you make me laugh without even trying.
+       <br><br>
+       We've made memories that I never want to forget, and honestly, I want a lot more of them.
+       More laughs. More stupid selfies. More arguments about absolutely nothing. More late-night conversations.
+       More “okay last photo” followed by twenty more photos. 😂
+       <br><br>
+       On your birthday, I just want you to remember one thing: wherever life takes us,
+       I’ll always be grateful that our paths crossed.
+       <br><br>
+       Keep smiling, keep being your crazy beautiful self, and please don't become too famous after seeing this website. 😌
+       <br><br>
+       Happy Birthday, Mika. I love you. ❤️
+     </p>
+     <div class="signature">— Yours, Prasant ❤️</div>
+   </div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="container reveal">
+   <div class="bigheart">❤️</div>
+   <div class="kicker">one last thing</div>
+   <h2>If I had to choose you all over again…</h2>
+   <p class="lead">I’d still choose you. Every single time.</p>
+   <button class="btn" onclick="celebrate()">Tap for one last surprise 🎁</button>
+   <p id="finalMsg" style="margin-top:25px;color:#ffabc1;font-family:'Cormorant Garamond';font-size:30px"></p>
+ </div>
+</section>
+
+<div class="footer">Made with love, chaos & too many feelings — Prasant ❤️</div>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+reveals.forEach(x=>obs.observe(x));
+
+const canvas=document.getElementById('hearts'),ctx=canvas.getContext('2d');
+let W,H,hearts=[];
+function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}
+function spawn(){hearts.push({x:Math.random()*W,y:H+20,s:6+Math.random()*10,v:.5+Math.random()*1.4,a:.25+Math.random()*.5})}
+function draw(){
+ ctx.clearRect(0,0,W,H);
+ hearts.forEach(h=>{h.y-=h.v;ctx.globalAlpha=h.a;ctx.font=h.s+'px serif';ctx.fillText('♥',h.x,h.y)});
+ hearts=hearts.filter(h=>h.y>-30);ctx.globalAlpha=1;requestAnimationFrame(draw)
+}
+resize();addEventListener('resize',resize);setInterval(spawn,650);draw();
+
+function celebrate(){
+ const msg=document.getElementById('finalMsg');
+ msg.innerHTML='Happy Birthday, meri favourite human. 🥹❤️<br><span style="font-size:18px;color:#bdb3ba">P.S. You still owe me a birthday cake. 🎂😂</span>';
+ for(let i=0;i<30;i++)setTimeout(spawn,i*35);
+}
+</script>
+</body>
+</html>
